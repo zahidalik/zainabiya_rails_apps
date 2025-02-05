@@ -25,8 +25,95 @@
   gap: 50px;
 }
 
+.small-nav_left a {
+  color: white;
+  text-decoration: none;
+}
+
+.small-nav_left a:hover {
+  color: rgb(224, 221, 221);
+  transition: all 0.3s ease-in-out;
+}
+
 .small-nav_right {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.small-nav_right a {
+  color: white;
+  text-decoration: none;
+}
+
+.large-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 90px;
+}
+
+.large-nav_links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.large-nav_links a {
+  color: rgb(0, 60, 111);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.large-nav_buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.large-nav_buttons a {
+  background-color: #009460;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.hero-section {
+  background-image: url(https://raoholidays.in/wp-content/uploads/2023/02/slide1.webp);
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-section_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 650px;
+}
+
+.hero-section_text h2 {
+  font-weight: 900;
+  font-size: xx-large;
+}
+
+.hero-section_text p {
+  font-weight: 900;
+  font-size: large;
+}
+
+.hero-section_button a {
+  background-color: #009460;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: larger;
 }
