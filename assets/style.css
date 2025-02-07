@@ -1,7 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-thin {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.big-shoulders-text-thin {
+  font-family: "Big Shoulders Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.raleway-bold {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 75px !important;
+  font-style: normal;
+}
+
+.raleway-italic {
+  font-family: "Raleway", serif;
+  font-weight: 400 !important;
+  font-size: 60px !important;
+  font-style: italic;
 }
 
 .icons {
@@ -67,6 +160,11 @@
   font-size: 18px;
 }
 
+.large-nav_links a:hover {
+  color: #0ce398;
+  transition: all 0.4s ease-in-out;
+}
+
 .large-nav_buttons {
   display: flex;
   gap: 20px;
@@ -80,8 +178,13 @@
   font-size: 18px;
 }
 
+.large-nav_buttons a:hover {
+  background-color: rgb(69, 118, 243);
+  transition: all 0.3s ease-in-out;
+}
 .hero-section {
-  background-image: url(https://raoholidays.in/wp-content/uploads/2023/02/slide1.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(https://raoholidays.in/wp-content/uploads/2023/02/slide1.webp);
   background-position: center;
   height: 70vh;
   display: flex;
@@ -96,18 +199,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 60px;
   width: 650px;
 }
 
-.hero-section_text h2 {
+.hero-section_text h1 {
   font-weight: 900;
   font-size: xx-large;
+  margin-bottom: 30px;
 }
 
 .hero-section_text p {
-  font-weight: 900;
+  font-weight: 400;
   font-size: large;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hero-section_text .title {
+  padding: 5px 10px;
+  letter-spacing: 3px;
+  color: #009460;
+  -webkit-text-stroke: 2px #fff;
+  text-align: center;
 }
 
 .hero-section_button a {
@@ -116,4 +230,23 @@
   text-decoration: none;
   padding: 10px 20px;
   font-size: larger;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
