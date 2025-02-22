@@ -16,6 +16,10 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </head>
   <body>
@@ -51,13 +55,83 @@
         />
       </div>
       <div class="flex pb-2 pl-32">
-        <div class="px-4 text-gray-500">Holidays</div>
+        <button
+          id="dropdownHoverButton"
+          data-dropdown-toggle="dropdownHover"
+          data-dropdown-trigger="hover"
+          type="button"
+          class="px-4 text-gray-500 flex items-center"
+        >
+          Holidays
+          <svg
+            class="w-2.5 h-2.5 ms-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          id="dropdownHover"
+          class="z-999 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownHoverButton"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Earnings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Sign out</a
+              >
+            </li>
+          </ul>
+        </div>
+
         <div class="px-4 text-gray-500">Forex</div>
         <div class="px-4 text-gray-500">Hotels</div>
         <div class="px-4 text-gray-500">Flights</div>
         <div class="px-4 text-gray-500">Cruise</div>
         <div class="px-4 text-gray-500">Eurail</div>
-        <div class="px-4 text-gray-500">Loyalty</div>
+        <div class="px-4 text-gray-500">
+          Loyalty
+          <span
+            class="bg-red-600 text-white px-1 py-0.5 rounded-md text-xs animate__animated animate__flash animate__slow animate__infinite"
+            >New</span
+          >
+        </div>
         <div class="px-4 text-gray-500">Gift Cards & Offers</div>
       </div>
     </div>
@@ -156,16 +230,88 @@
       </button>
     </div>
 
-    <div class="bg-cyan-600 pt-5 pb-3 opacity-90">
+    <div class="bg-slate-800/75 pt-5 pb-3 relative -top-26 z-999">
       <form action="" class="flex flex-col items-center">
         <div>
           <p class="text-white text-2xl pb-2">
             I want to holiday in and around...
           </p>
           <div class="flex">
-            <input type="text" class="h-8 rounded-md" />
-            <input type="text" class="h-8 rounded-md" />
-            <input type="text" class="h-8 rounded-md" />
+            <input
+              type="text"
+              class="h-8 rounded-l-md w-96 border-l-0 border-t-0 border-b-0 border-r border-gray-400"
+              placeholder="Destination e.g. Kashmir / Theme e.g. Adventure"
+            />
+
+            <button
+              id="dropdownDefaultButton"
+              data-dropdown-toggle="dropdown"
+              class="h-8 w-48 bg-white flex items-center justify-center text-gray-500"
+              type="button"
+            >
+              Budget per person
+              <svg
+                class="w-2.5 h-2.5 ms-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div
+              id="dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdownDefaultButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Earnings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <input
+              type="text"
+              class="h-8 rounded-r-md border-r-0 border-t-0 border-b-0 border-l border-gray-400"
+              placeholder="Month of travel"
+            />
             <button class="bg-blue-800 px-3 rounded-md py-1 text-white ml-2">
               Search
             </button>
